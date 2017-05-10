@@ -1,0 +1,75 @@
+*{
+	margin: 0px;
+	padding: 0px;
+    box-sizing: border-box;
+}
+body{
+	padding:10px;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{*+height:1%;}
+
+
+.w-lock-table{
+	width: 600px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+.w-lock-table .m-lock-left{
+	float:left;
+}
+.w-lock-table .m-lock-right{
+	float:left;
+	width:297px;    /*需要计算右侧宽度，注意Resize时*/
+}
+.w-lock-table table{
+    border-collapse: collapse;
+    margin-top:-1px;
+}
+.w-lock-table table th, .w-lock-table table td{
+	height: 40px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    min-width: 100px;
+    width: 100px;
+}
+.w-lock-table .m-lock-left table th, .w-lock-table .m-lock-left table td{
+	border-left: none;
+}
+.w-lock-table .table-corner{
+	position: relative;
+    z-index: 2;
+    background: #fff;
+}
+.w-lock-table .table-top{
+	position: relative;
+    z-index: 1;
+    background: #fff;
+}
+.w-lock-table .lock-left{
+	margin-top: -41px;
+	height: 381px;
+    overflow: hidden;
+}
+.w-lock-table .lock-left thead th, .w-lock-table  .table-content-box thead th{
+	opacity: 0;
+}
+.w-lock-table .lock-top{
+	width:279px;
+	overflow: hidden;
+}
+.w-lock-table .lock-top thead th{
+	background: #fff;
+}
+.w-lock-table .table-content-box{
+	overflow: auto;
+    margin-top: -41px;
+    height: 100%;
+}
